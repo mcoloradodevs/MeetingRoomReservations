@@ -1,0 +1,107 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_reservas",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_reserva",
+    "MaxGetRowsCount": 500,
+    "Name": "Reservas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msus_Auditorio": "Auditorio",
+      "msus_Capacidad": "Capacidad",
+      "msus_duracion": "Duracion",
+      "msus_fecha": "Fecha",
+      "msus_horadefin": "Hora de fin",
+      "msus_horadeinicio": "Hora de inicio",
+      "msus_name": "Código",
+      "msus_reserva_AsyncOperations": "Trabajos del sistema",
+      "msus_reserva_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_reserva_DuplicateBaseRecord": "Registros duplicados (msus_reserva_DuplicateBaseRecord)",
+      "msus_reserva_DuplicateMatchingRecord": "Registros duplicados (msus_reserva_DuplicateMatchingRecord)",
+      "msus_reserva_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_reserva_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_reserva_ProcessSession": "Sesiones de proceso",
+      "msus_reserva_SyncErrors": "Errores de sincronización",
+      "msus_reservaid": "Reserva",
+      "msus_Sala": "Sala",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Reservas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Reservas (Vistas)",
+    "Name": "_msus_reserva_views",
+    "RelatedEntityName": "Reservas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0b170526-0afc-4f7b-9b5e-f0627f91636d": "Reserva Advanced Find View",
+      "1c13ea64-d6a8-4a16-b487-670032a72fde": "Reserva Associated View",
+      "29a20c9e-08fe-4b74-bd8d-3239f0b06166": "Inactive Reservas",
+      "32da6dad-ef53-ed11-9561-000d3ac18ffd": "Reservas de espacios de trabajo",
+      "9365b8eb-7899-4edc-b87c-d783290c6bde": "Vista asociada de reserva",
+      "aef2fdc7-a546-ed11-bba1-000d3a3235a8": "Todas las reservas de salas",
+      "af3dcc0a-a646-ed11-bba1-000d3a3235a8": "Todas las reservas de auditorios",
+      "b5bca827-fc06-408b-a0c1-b3bb6f2c3c43": "Reserva Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Reservas)",
+    "Name": "msus_reserva_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Reservas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Reservas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Reservas)",
+    "Name": "msus_reserva_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Reservas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Reservas",
+    "Type": "OptionSetInfo"
+  }
+]

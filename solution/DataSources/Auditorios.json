@@ -1,0 +1,154 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_auditorios",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_auditorio",
+    "MaxGetRowsCount": 500,
+    "Name": "Auditorios",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msus_auditorio_Annotations": "Notas",
+      "msus_auditorio_AsyncOperations": "Trabajos del sistema",
+      "msus_auditorio_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_auditorio_DuplicateBaseRecord": "Registros duplicados (msus_auditorio_DuplicateBaseRecord)",
+      "msus_auditorio_DuplicateMatchingRecord": "Registros duplicados (msus_auditorio_DuplicateMatchingRecord)",
+      "msus_auditorio_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_auditorio_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_auditorio_ProcessSession": "Sesiones de proceso",
+      "msus_auditorio_SyncErrors": "Errores de sincronización",
+      "msus_auditorioid": "Auditorio",
+      "msus_estado": "Estado",
+      "msus_imagen": "Imagen",
+      "msus_imagenid": "msus_ImagenId",
+      "msus_Montaje_msus_Auditorio_msus_Auditori": "Montajes",
+      "msus_nombre": "Nombre",
+      "msus_piso": "Piso",
+      "msus_Reserva_msus_Auditorio_msus_Auditori": "Reservas",
+      "msus_Sede": "Sede",
+      "msus_servicios": "Servicios",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Auditorios",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Auditorios (Vistas)",
+    "Name": "_msus_auditorio_views",
+    "RelatedEntityName": "Auditorios",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0c7b3f3f-3a1c-403f-b6f2-042c74566190": "Auditorio Advanced Find View",
+      "2c89248b-b837-4110-ad95-eb90e4a19031": "Active Auditorios",
+      "6c76c09a-43c3-4d07-a609-732234b3e1fd": "Inactive Auditorios",
+      "71ae32d4-03c4-4cbd-a77e-b8acd2b63da1": "Auditorio Lookup View",
+      "bf9341f5-ef7c-4590-960b-336f9ede2520": "Auditorio Associated View"
+    }
+  },
+  {
+    "DisplayName": "Estado (Auditorios)",
+    "Name": "msus_auditorio_msus_estado",
+    "OptionSetInfoNameMapping": {
+      "463880000": "Activo",
+      "463880001": "En mantenimiento",
+      "463880002": "En remodelación"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msus_estado",
+        "OptionSetReferenceEntityName": "Auditorios"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msus_estado",
+    "RelatedEntityName": "Auditorios",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Servicios (Auditorios)",
+    "Name": "msus_auditorio_msus_servicios",
+    "OptionSetInfoNameMapping": {
+      "463880000": "Micrófono",
+      "463880001": "Video-beam",
+      "463880002": "Tarima",
+      "463880003": "Aire libre",
+      "463880004": "Cerrado",
+      "463880005": "Acceso personas con discapacidad",
+      "463880006": "Conexión HDMI",
+      "463880007": "Sonido Auxiliar"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msus_servicios",
+        "OptionSetReferenceEntityName": "Auditorios"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "msus_servicios",
+    "RelatedEntityName": "Auditorios",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Auditorios)",
+    "Name": "msus_auditorio_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Auditorios"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Auditorios",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Auditorios)",
+    "Name": "msus_auditorio_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Auditorios"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Auditorios",
+    "Type": "OptionSetInfo"
+  }
+]

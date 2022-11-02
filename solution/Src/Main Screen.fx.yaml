@@ -1,0 +1,128 @@
+"'Main Screen' As screen":
+
+    "gal_Sedes As gallery.'BrowseLayout_Horizontal_TwoTextOneImageOverlayVariant_ver4.0'":
+        BorderStyle: =BorderStyle.None
+        Default: =First(colSedes)
+        Height: =625
+        Items: =If(IsBlank(txt_BuscarSede.Text) , colSedes, Filter(colSedes, txt_BuscarSede.Text in Nombre Or txt_BuscarSede.Text in Dirección ))
+        OnSelect: =Set(varSedeSeleccionada, ThisItem)
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =15
+        TemplateSize: =Min(440, Self.Height - 60)
+        Width: =618
+        Y: =102
+        ZIndex: =1
+
+        Image5 As image:
+            Height: =Parent.TemplateHeight
+            Image: =ThisItem.Imagen
+            ImagePosition: =ImagePosition.Stretch
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        Overlay1 As rectangle:
+            Height: =175
+            OnSelect: =Select(Parent)
+            Width: =Image5.Width
+            Y: =419
+            ZIndex: =2
+
+        Title3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Nombre
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Overlay1.Width - 32
+            X: =Overlay1.X + 16
+            Y: =Overlay1.Y + 16
+            ZIndex: =3
+
+        Subtitle3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Ciudad
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height + 8
+            ZIndex: =4
+
+        Rectangle1 As rectangle:
+            Fill: =If(ThisItem.IsSelected, RGBA(0, 0, 0, 0), RGBA(12, 12, 12, 0.8))
+            Height: =595
+            OnSelect: =Select(Parent)
+            Width: =440
+            ZIndex: =5
+
+        Subtitle3_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: |-
+                ="Puestos: " & ThisItem.'Capacidad total de puestos' & "| Salas: " & ThisItem.'Número de salas' & " | Auditorios: " & ThisItem.'Número de auditorios'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =531
+            ZIndex: =6
+
+    Button1 As button:
+        DisplayMode: =If(varSedeSeleccionada.'Capacidad total de puestos' > 0, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =150
+        OnSelect: |-
+            =Set(varFechaSeleccionada, DateValue(Text(Today(), UTC))); //Variable para almacenar la fecha de hoy -- convertida a la zona horaria UTC
+            ClearCollect(colDisponibilidadSede, ShowColumns(Filter( Capacidades, Sede.Sede = varSedeSeleccionada.Sede And Fecha >= varFechaSeleccionada And Fecha <= DateAdd(varFechaSeleccionada, 1, Days ) ), "msus_fecha", "msus_horadeinicio", "msus_horadefin", "msus_Piso", "msus_capacidadid", "msus_capacidaddisponible" ) );
+            Navigate('Reservation Screen')
+        Size: =18
+        Text: ="Puesto"
+        Width: =150
+        X: =21
+        Y: =741
+        ZIndex: =2
+
+    Button1_1 As button:
+        DisplayMode: =If(varSedeSeleccionada.'Número de salas' > 0, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =150
+        Size: =18
+        Text: ="Sala"
+        Width: =150
+        X: =244
+        Y: =741
+        ZIndex: =3
+
+    Button1_2 As button:
+        DisplayMode: =If(varSedeSeleccionada.'Número de auditorios' > 0, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =150
+        Size: =18
+        Text: ="Auditorio"
+        Width: =150
+        X: =468
+        Y: =741
+        ZIndex: =4
+
+    txt_BuscarSede As text:
+        Clear: =true
+        Default: =""
+        Height: =70
+        HintText: ="Buscar una sede"
+        OnChange: =Set(varSedeSeleccionada, First(gal_Sedes.AllItems))
+        Size: =21
+        Width: =597
+        X: =21
+        Y: =32
+        ZIndex: =5
+

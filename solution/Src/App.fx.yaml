@@ -1,0 +1,75 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =LoadData(// Tries to load the themes from cache
+                colThemes,
+                "colThemes",
+                true
+            );
+        //Clear(colThemes);
+            If(// checks if the themes exists in the local cache
+                IsEmpty(colThemes),
+                ClearCollect(// creates a local location with the current theme color and logo
+                    colThemes,
+                    First(Temas)
+                );
+                SaveData(// saves the theme into a local cache/file
+                    colThemes,
+                    "colThemes"
+                );
+            );
+            Set(// sets the default application theme. in the future, this is going to be part of the user settings
+                varThemeSettings,
+                First(// loads the first theme
+                    colThemes
+                )
+            );
+        
+        Set(// sets the default app style, such as font size, input size, margins etc
+            varAppStyle,
+            {
+                // primary default color
+                ColorPrincipal: ColorValue(varThemeSettings.'Color principal'),
+                // secondary default color
+                ColorSecundario: ColorValue(varThemeSettings.'Color secundario'),
+                // main background colors
+                ColorFondo: ColorValue(varThemeSettings.'Color de fondo'),
+                // main input border color
+                ColorAcento: ColorValue(varThemeSettings.'Color de acento'),
+                // base color - usually white
+                ColorFuente: ColorValue(varThemeSettings.'Color de fuente'),
+                // Fuente de títulos
+                FuenteTitulos: varThemeSettings.'Tipografía web (títulos)',
+                // Fuente de subtítulos
+                FuenteSubtitulos: varThemeSettings.'Tipografía web (subtítulos)',
+                // Fuente de cuerpos
+                FuenteCuerpos: varThemeSettings.'Tipografía web',
+                // default icon size
+                IconSize: 64,
+                // small input height
+                InputSmaller: 40,
+                // smaller input height
+                InputSmall: 48,
+                // medium input height 
+                InputMedium: 64,
+                // large input height
+                InputLarge: 80,
+                // large input height
+                InputLarger: 96,
+                // spacing (10 px), for icon & label positioning inside a button and other scenarios
+                Spacing: 10,
+                // padding (20 px), for input padding
+                Padding: 20,
+                // container margin (30 px)
+                Margin: 30,
+                // border radius for input, buttons and cards 
+                BorderRadius: 4,
+                // just an assessor to the app theme
+                Theme: varThemeSettings
+            }
+        );
+        Set(// just to facilitate the usage of svg images
+            varSVGPrefix,
+            "data:image/svg+xml,"
+        );
+

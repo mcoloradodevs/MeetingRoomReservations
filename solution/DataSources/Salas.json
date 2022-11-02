@@ -1,0 +1,162 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_salas",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_sala",
+    "MaxGetRowsCount": 500,
+    "Name": "Salas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msus_capacidad": "Capacidad",
+      "msus_estado": "Estado",
+      "msus_imagen": "Imagen",
+      "msus_imagenid": "msus_ImagenId",
+      "msus_nombre": "Nombre",
+      "msus_piso": "Piso",
+      "msus_Reserva_msus_Sala_msus_Sala": "Reservas",
+      "msus_sala_Annotations": "Notas",
+      "msus_sala_AsyncOperations": "Trabajos del sistema",
+      "msus_sala_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_sala_DuplicateBaseRecord": "Registros duplicados (msus_sala_DuplicateBaseRecord)",
+      "msus_sala_DuplicateMatchingRecord": "Registros duplicados (msus_sala_DuplicateMatchingRecord)",
+      "msus_sala_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_sala_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_sala_ProcessSession": "Sesiones de proceso",
+      "msus_sala_SyncErrors": "Errores de sincronización",
+      "msus_salaid": "Sala",
+      "msus_Sede": "Sede",
+      "msus_servicios": "Servicios",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Salas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Salas (Vistas)",
+    "Name": "_msus_sala_views",
+    "RelatedEntityName": "Salas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "95c95702-f9df-4595-b7ba-fb8f6cbf1e68": "Sala Associated View",
+      "9ff73d80-a146-ed11-bba1-000d3a323ca9": "Salas en remodelación",
+      "a54c3653-04f4-4612-8feb-b28b5c211be1": "Sala Advanced Find View",
+      "b4dd666a-a146-ed11-bba1-000d3a3235a8": "Salas en mantenimiento",
+      "c9efd7fe-b54f-42ec-8367-0259d3c69600": "Sala Lookup View",
+      "cde15a95-a146-ed11-bba1-000d3a3235a8": "Salas activas de la sede",
+      "d43a6bdf-5500-4f31-b67f-7ecb31e74a61": "Salas activas",
+      "e0a9f568-aeaf-4c5c-a5ca-fd4c3adfadb5": "Inactive Salas"
+    }
+  },
+  {
+    "DisplayName": "Estado (Salas)",
+    "Name": "msus_sala_msus_estado",
+    "OptionSetInfoNameMapping": {
+      "463880000": "Activa",
+      "463880001": "En mantenimiento",
+      "463880002": "En remodelación"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msus_estado",
+        "OptionSetReferenceEntityName": "Salas"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msus_estado",
+    "RelatedEntityName": "Salas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Servicios (Salas)",
+    "Name": "msus_sala_msus_servicios",
+    "OptionSetInfoNameMapping": {
+      "100000000": "463880000 - Video-beam; 463880001 - Conexión HDMI; 463880006 - Acceso personas con discapacidad; Telon; Graderías; espacio abierto; Tablero móvil (100000000)",
+      "100000001": "463880005 – Televisor; 463880001 - Conexión HDMI; Ventilador; Tablero",
+      "100000002": "463880005 - Televisor; 463880004 - Cámara Teams Rooms; XXXXXXX – Micrófono altavoz 463880001 - Conexión HDMI",
+      "100000003": "463880005 - Televisor; 463880004 - Cámara Teams Rooms; XXXXXXX – Micrófono altavoz 463880001 - Conexión HDMI; 463880006 - Acceso personas con discapacidad",
+      "100000004": "463880000 - Video-beam; 463880001 - Conexión HDMI; 463880006 - Acceso personas con discapacidad; Telon; Graderías; espacio abierto; Tablero móvil (100000004)",
+      "100000005": "463880005 - Televisor; 463880004 - Cámara Teams Rooms; XXXXXXX – Micrófono altavoz 463880001 - Conexión HDMI; 463880006 - Acceso personas con discapacidad: Tablero móvil",
+      "463880000": "Video-beam",
+      "463880001": "Conexión HDMI",
+      "463880002": "Conexión VGA",
+      "463880003": "Conexión One-touch",
+      "463880004": "Cámara Teams Rooms",
+      "463880005": "Televisor",
+      "463880006": "Acceso personas con discapacidad"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msus_servicios",
+        "OptionSetReferenceEntityName": "Salas"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "msus_servicios",
+    "RelatedEntityName": "Salas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Salas)",
+    "Name": "msus_sala_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Salas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Salas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Salas)",
+    "Name": "msus_sala_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Salas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Salas",
+    "Type": "OptionSetInfo"
+  }
+]

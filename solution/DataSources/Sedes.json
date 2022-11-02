@@ -1,0 +1,121 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_sedes",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_sede",
+    "MaxGetRowsCount": 500,
+    "Name": "Sedes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msus_capacidadtotaldepuestos": "Capacidad total de puestos",
+      "msus_capacidadtotaldepuestos_date": "Capacidad total de puestos (fecha de última actualización)",
+      "msus_capacidadtotaldepuestos_state": "Capacidad total de puestos (estado)",
+      "msus_ciudad": "Ciudad",
+      "msus_direccion": "Dirección",
+      "msus_horadeapertura": "Hora de apertura",
+      "msus_horadeaperturanamefield": "Hora de apertura (namefield)",
+      "msus_horadecierre": "Hora de cierre",
+      "msus_horadecierrenamefield": "Hora de cierre (namefield)",
+      "msus_imagen": "Imagen",
+      "msus_imagenid": "msus_ImagenId",
+      "msus_latitud": "Latitud",
+      "msus_longitud": "Longitud",
+      "msus_msus_capacidad_sede": "Capacidades",
+      "msus_nombre": "Nombre",
+      "msus_numerodeauditorios": "Número de auditorios",
+      "msus_numerodeauditorios_date": "Número de auditorios (fecha de última actualización)",
+      "msus_numerodeauditorios_state": "Número de auditorios (estado)",
+      "msus_numerodesalas": "Número de salas",
+      "msus_numerodesalas_date": "Número de salas (fecha de última actualización)",
+      "msus_numerodesalas_state": "Número de salas (estado)",
+      "msus_Piso_msus_Sede_msus_Sede": "Pisos",
+      "msus_sede_AsyncOperations": "Trabajos del sistema",
+      "msus_sede_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_sede_DuplicateBaseRecord": "Registros duplicados (msus_sede_DuplicateBaseRecord)",
+      "msus_sede_DuplicateMatchingRecord": "Registros duplicados (msus_sede_DuplicateMatchingRecord)",
+      "msus_sede_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_Sede_msus_Sede_msus_Anuncio": "Anuncios",
+      "msus_Sede_msus_Sede_msus_Auditorio": "Auditorios",
+      "msus_Sede_msus_Sede_msus_Sala": "Salas",
+      "msus_sede_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_sede_ProcessSession": "Sesiones de proceso",
+      "msus_sede_SyncErrors": "Errores de sincronización",
+      "msus_sedeid": "Sede",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Sedes",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Sedes (Vistas)",
+    "Name": "_msus_sede_views",
+    "RelatedEntityName": "Sedes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "32f008df-a946-ed11-bba1-000d3a3235a8": "Sedes inactivas",
+      "39e1924f-dd02-44fa-a627-00e93b3d6e53": "Sede Lookup View",
+      "54fab635-3f6b-4e12-829b-97719ffe95a6": "Sedes activas",
+      "71596814-1b13-4258-bddf-84aaac5aa042": "Sede Advanced Find View",
+      "857530dc-2f9b-4171-999f-8c529aede1e0": "Sede Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Sedes)",
+    "Name": "msus_sede_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Sedes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Sedes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Sedes)",
+    "Name": "msus_sede_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Sedes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Sedes",
+    "Type": "OptionSetInfo"
+  }
+]

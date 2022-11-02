@@ -1,0 +1,62 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_msus_sede_forms",
+      "Namespace": "Sedes (Formularios)",
+      "Values": {
+        "Formulario de vista rápida de la sede": "26e92cc9-2a9d-441d-ad2d-810d4d10db5e",
+        "Formulario principal de la sede": "5808a871-0b14-44d4-a0ec-9bec55bd2c7e",
+        "Information": "3a7c1e89-3e0c-4612-b49f-4f5256e8df94"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_piso_forms",
+      "Namespace": "Pisos (Formularios)",
+      "Values": {
+        "Formulario principal del piso": "909c81ce-d9cc-4dc6-9c17-cbaebab899d2",
+        "Información": "671b8294-257c-467c-95ba-e5ace3852b88"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_reserva_forms",
+      "Namespace": "Reservas (Formularios)",
+      "Values": {
+        "Crear reserva para un horario de puesto de trabajo": "014807a0-f353-ed11-9561-000d3ac18ffd",
+        "Information": "fb8c27db-d628-49e2-aa77-f554738300f1"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_capacidad_forms",
+      "Namespace": "Capacidades (Formularios)",
+      "Values": {
+        "Formulario de creación de capacidad": "3ac839d3-b716-428a-8d40-88115739dbe2",
+        "Formulario de creación rápida de capacidad": "f376da26-ef53-ed11-9561-000d3ac18ffd",
+        "Información": "624348c1-2b57-4f98-b0fb-5f1e54ccd4fc"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_sala_forms",
+      "Namespace": "Salas (Formularios)",
+      "Values": {
+        "Crear rápidamente sala": "5e5bc871-a346-ed11-bba1-000d3a323ca9",
+        "Información de la sala": "3b798f7f-c91b-4c3c-aea3-81276d1e6455",
+        "Information": "c853b2de-4bb2-4ab4-bcbc-ddde3aa50bb6"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_auditorio_forms",
+      "Namespace": "Auditorios (Formularios)",
+      "Values": {
+        "Information": "c46c4ba8-1a6e-4e3a-b8b7-c4d757bc4693"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_tema_forms",
+      "Namespace": "Temas (Formularios)",
+      "Values": {
+        "Formulario de creación de un tema": "8421926f-c390-4903-bce8-b284e24b7e50",
+        "Información": "68282d95-6d9b-4c2c-8452-e8616c8e39b7"
+      }
+    }
+  ]
+}

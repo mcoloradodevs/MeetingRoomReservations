@@ -1,0 +1,114 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_temas",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_tema",
+    "MaxGetRowsCount": 500,
+    "Name": "Temas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Propietario",
+      "{Attachments}": "Attachments",
+      "createdby": "Autor",
+      "createdon": "Fecha de creación",
+      "createdonbehalfby": "Autor (delegado)",
+      "importsequencenumber": "Número de secuencia de importación",
+      "modifiedby": "Modificado por",
+      "modifiedon": "Fecha de modificación",
+      "modifiedonbehalfby": "Modificado por (delegado)",
+      "msus_colordeacento": "Color de acento",
+      "msus_colordefondo": "Color de fondo",
+      "msus_colordefuente": "Color de fuente",
+      "msus_colorprincipal": "Color principal",
+      "msus_colorsecundario": "Color secundario",
+      "msus_isotipo": "Isotipo",
+      "msus_isotipoid": "msus_IsotipoId",
+      "msus_logotipoprincipal": "Logotipo principal",
+      "msus_logotipoprincipalid": "msus_LogotipoprincipalId",
+      "msus_logotipoprincipalsvg": "Logotipo principal SVG",
+      "msus_logotiposecundario": "Logotipo secundario",
+      "msus_logotiposecundarioid": "msus_LogotiposecundarioId",
+      "msus_name": "Name",
+      "msus_tema_Annotations": "Notas",
+      "msus_tema_AsyncOperations": "Trabajos del sistema",
+      "msus_tema_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_tema_DuplicateBaseRecord": "Registros duplicados (msus_tema_DuplicateBaseRecord)",
+      "msus_tema_DuplicateMatchingRecord": "Registros duplicados (msus_tema_DuplicateMatchingRecord)",
+      "msus_tema_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_tema_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_tema_ProcessSession": "Sesiones de proceso",
+      "msus_tema_SyncErrors": "Errores de sincronización",
+      "msus_temaid": "Tema",
+      "msus_tipografiaweb": "Tipografía web",
+      "msus_tipografiawebsubtitulos": "Tipografía web (subtítulos)",
+      "msus_tipografiawebtitulos": "Tipografía web (títulos)",
+      "overriddencreatedon": "Fecha de creación del registro",
+      "owningbusinessunit": "Unidad de negocio propietaria",
+      "owningteam": "Equipo propietario",
+      "owninguser": "Usuario propietario",
+      "statecode": "Estado",
+      "statuscode": "Razón para el estado",
+      "timezoneruleversionnumber": "Número de versión de regla de zona horaria",
+      "utcconversiontimezonecode": "Código de zona horaria de conversión UTC",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Temas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Temas (Vistas)",
+    "Name": "_msus_tema_views",
+    "RelatedEntityName": "Temas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "65c68ff3-35e0-43a6-8d49-b0c64ec3c6e7": "Vista de búsqueda de Tema",
+      "aa426450-8f20-485e-829d-e1df442e8118": "Vista de búsqueda avanzada de Tema",
+      "b5734160-3fe7-48ac-ba00-ebbf437a7dd0": "Vista asociada de Tema",
+      "c29f836d-1271-411d-89dc-b2269598bee0": "Temas inactivo",
+      "c7f2239d-9ac6-44ab-8247-2494d56e1083": "Todos los temas"
+    }
+  },
+  {
+    "DisplayName": "Estado (Temas)",
+    "Name": "msus_tema_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Activo",
+      "1": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Temas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Temas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razón para el estado (Temas)",
+    "Name": "msus_tema_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Activo",
+      "2": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Temas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Temas",
+    "Type": "OptionSetInfo"
+  }
+]

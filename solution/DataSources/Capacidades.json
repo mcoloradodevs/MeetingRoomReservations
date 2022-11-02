@@ -1,0 +1,108 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_capacidads",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_capacidad",
+    "MaxGetRowsCount": 500,
+    "Name": "Capacidades",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Propietario",
+      "createdby": "Autor",
+      "createdon": "Fecha de creación",
+      "createdonbehalfby": "Autor (delegado)",
+      "importsequencenumber": "Número de secuencia de importación",
+      "modifiedby": "Modificado por",
+      "modifiedon": "Fecha de modificación",
+      "modifiedonbehalfby": "Modificado por (delegado)",
+      "msus_capacidad": "Capacidad",
+      "msus_capacidad_AsyncOperations": "Trabajos del sistema",
+      "msus_capacidad_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_capacidad_DuplicateBaseRecord": "Registros duplicados (msus_capacidad_DuplicateBaseRecord)",
+      "msus_capacidad_DuplicateMatchingRecord": "Registros duplicados (msus_capacidad_DuplicateMatchingRecord)",
+      "msus_capacidad_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_Capacidad_msus_Capacidad_msus_Reserv": "Reservas",
+      "msus_capacidad_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_capacidad_ProcessSession": "Sesiones de proceso",
+      "msus_capacidad_SyncErrors": "Errores de sincronización",
+      "msus_capacidaddisponible": "Capacidad disponible",
+      "msus_capacidadid": "Capacidad GUID",
+      "msus_capacidadreservada": "Capacidad reservada",
+      "msus_capacidadreservada_date": "Capacidad reservada (fecha de última actualización)",
+      "msus_capacidadreservada_state": "Capacidad reservada (estado)",
+      "msus_fecha": "Fecha",
+      "msus_horadefin": "Hora de fin",
+      "msus_horadeinicio": "Hora de inicio",
+      "msus_id": "ID",
+      "msus_Piso": "Piso",
+      "msus_Sede": "Sede",
+      "overriddencreatedon": "Fecha de creación del registro",
+      "owningbusinessunit": "Unidad de negocio propietaria",
+      "owningteam": "Equipo propietario",
+      "owninguser": "Usuario propietario",
+      "statecode": "Estado",
+      "statuscode": "Razón para el estado",
+      "timezoneruleversionnumber": "Número de versión de regla de zona horaria",
+      "utcconversiontimezonecode": "Código de zona horaria de conversión UTC",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Capacidades",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Capacidades (Vistas)",
+    "Name": "_msus_capacidad_views",
+    "RelatedEntityName": "Capacidades",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0948f9bd-5060-4bf0-b738-407eee47f5bf": "Vista asociada de Capacidad",
+      "296011f5-6424-415d-a1dd-17cd9c2961c5": "Todas las capacidades activas",
+      "35c660b7-cd52-4f00-87c9-e5453d2cc457": "Vista de búsqueda de Capacidad",
+      "951b236c-74cf-4eac-ab93-a08203d94666": "Vista de búsqueda avanzada de Capacidad",
+      "f60d9017-ee53-ed11-9561-000d3ac18ffd": "Todas las capacidades inactivas"
+    }
+  },
+  {
+    "DisplayName": "Estado (Capacidades)",
+    "Name": "msus_capacidad_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Activo",
+      "1": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Capacidades"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Capacidades",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razón para el estado (Capacidades)",
+    "Name": "msus_capacidad_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Activo",
+      "2": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Capacidades"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Capacidades",
+    "Type": "OptionSetInfo"
+  }
+]

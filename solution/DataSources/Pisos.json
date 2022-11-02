@@ -1,0 +1,112 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msus_pisos",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msus_piso",
+    "MaxGetRowsCount": 500,
+    "Name": "Pisos",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Propietario",
+      "{Attachments}": "Attachments",
+      "createdby": "Autor",
+      "createdon": "Fecha de creación",
+      "createdonbehalfby": "Autor (delegado)",
+      "importsequencenumber": "Número de secuencia de importación",
+      "modifiedby": "Modificado por",
+      "modifiedon": "Fecha de modificación",
+      "modifiedonbehalfby": "Modificado por (delegado)",
+      "msus_Capacidad_msus_Piso_msus_Piso": "Capacidades",
+      "msus_capacidadnominal": "Capacidad nominal",
+      "msus_fechadevigencia": "Fecha de vigencia",
+      "msus_hoy": "¿Qué día es hoy?",
+      "msus_imagen1": "Imagen 1",
+      "msus_imagen1id": "msus_Imagen1Id",
+      "msus_imagen2": "Imagen 2",
+      "msus_imagen2id": "msus_Imagen2Id",
+      "msus_imagen3": "Imagen 3",
+      "msus_imagen3id": "msus_Imagen3Id",
+      "msus_piso_Annotations": "Notas",
+      "msus_piso_AsyncOperations": "Trabajos del sistema",
+      "msus_piso_BulkDeleteFailures": "Errores de eliminación en masa",
+      "msus_piso_DuplicateBaseRecord": "Registros duplicados (msus_piso_DuplicateBaseRecord)",
+      "msus_piso_DuplicateMatchingRecord": "Registros duplicados (msus_piso_DuplicateMatchingRecord)",
+      "msus_piso_MailboxTrackingFolders": "Carpetas de seguimiento automático del buzón",
+      "msus_piso_PrincipalObjectAttributeAccesses": "Uso compartido de campos",
+      "msus_piso_ProcessSession": "Sesiones de proceso",
+      "msus_piso_SyncErrors": "Errores de sincronización",
+      "msus_pisoid": "Piso",
+      "msus_pisonumero": "Piso Número",
+      "msus_porcentajereducidodecapacidad": "Porcentaje reducido de capacidad (%)",
+      "msus_Sede": "Sede",
+      "overriddencreatedon": "Fecha de creación del registro",
+      "owningbusinessunit": "Unidad de negocio propietaria",
+      "owningteam": "Equipo propietario",
+      "owninguser": "Usuario propietario",
+      "statecode": "Estado",
+      "statuscode": "Razón para el estado",
+      "timezoneruleversionnumber": "Número de versión de regla de zona horaria",
+      "utcconversiontimezonecode": "Código de zona horaria de conversión UTC",
+      "versionnumber": "Número de versión"
+    },
+    "PreferredName": "Pisos",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Pisos (Vistas)",
+    "Name": "_msus_piso_views",
+    "RelatedEntityName": "Pisos",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0c5af730-5b4c-4d8a-8ab2-6f395074cd8c": "Buscar un piso",
+      "40e4e9fa-8c4c-455b-ac09-a1002cb3fe9f": "Vista asociada de Piso",
+      "48600e07-9186-486b-8155-80b5447a3657": "Vista de búsqueda avanzada de Piso",
+      "94ed2ebc-1233-4d6b-abf5-45a4f2bc039b": "Todos los pisos activos",
+      "ace85066-6606-4093-8bf4-4984f8965db7": "Todos los pisos inactivos",
+      "d528d770-ed53-ed11-9561-000d3ac18ffd": "Todos los pisos de la sede"
+    }
+  },
+  {
+    "DisplayName": "Estado (Pisos)",
+    "Name": "msus_piso_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Activo",
+      "1": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Pisos"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Pisos",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razón para el estado (Pisos)",
+    "Name": "msus_piso_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Activo",
+      "2": "Inactivo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Pisos"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Pisos",
+    "Type": "OptionSetInfo"
+  }
+]
