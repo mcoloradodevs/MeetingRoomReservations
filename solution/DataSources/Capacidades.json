@@ -35,6 +35,7 @@
       "msus_fecha": "Fecha",
       "msus_horadefin": "Hora de fin",
       "msus_horadeinicio": "Hora de inicio",
+      "msus_horario": "Horario",
       "msus_id": "ID",
       "msus_Piso": "Piso",
       "msus_Sede": "Sede",
@@ -64,6 +65,26 @@
       "951b236c-74cf-4eac-ab93-a08203d94666": "Vista de búsqueda avanzada de Capacidad",
       "f60d9017-ee53-ed11-9561-000d3ac18ffd": "Todas las capacidades inactivas"
     }
+  },
+  {
+    "DisplayName": "Horario (Capacidades)",
+    "Name": "msus_capacidad_msus_horario",
+    "OptionSetInfoNameMapping": {
+      "463880000": "Mañana",
+      "463880001": "Tarde"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msus_horario",
+        "OptionSetReferenceEntityName": "Capacidades"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msus_horario",
+    "RelatedEntityName": "Capacidades",
+    "Type": "OptionSetInfo"
   },
   {
     "DisplayName": "Estado (Capacidades)",

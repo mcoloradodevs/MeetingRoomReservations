@@ -94,11 +94,11 @@
     "FileID": "c77c7320-9985-47a1-9700-86f0efe0b7bb",
     "Id": "c77c7320-9985-47a1-9700-86f0efe0b7bb",
     "InstrumentationKey": "",
-    "Name": "Crear Reserva",
+    "Name": "Crear Reserva - Copia",
     "OriginatingVersion": "1.326"
   },
   "PublishInfo": {
-    "AppName": "Crear Reserva",
+    "AppName": "Crear Reserva - Copia",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -113,6 +113,6 @@
     "Main Screen",
     "Reservation Screen",
     "Floor Screen",
-    "Screen5"
+    "Screen1"
   ]
 }

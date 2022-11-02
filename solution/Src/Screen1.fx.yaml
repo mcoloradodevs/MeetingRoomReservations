@@ -1,4 +1,4 @@
-"Screen5 As screen.'phoneLayout_Calendar_ver3.0'":
+"Screen1 As screen.'phoneLayout_Calendar_ver3.0'":
 
     RectQuickActionBar1 As rectangle:
         Height: =88
@@ -145,7 +145,7 @@
         Y: =LblMonthSelected1.Y + LblMonthSelected1.Height + 20
         ZIndex: =9
 
-        Title4 As label:
+        Title1 As label:
             Align: =Align.Center
             Height: =WeekdayGallery1.TemplateHeight
             OnSelect: =Select(Parent)
@@ -177,22 +177,22 @@
             OnSelect: =Select(Parent)
             Visible: |-
                 =/*Visible if calendar events are found on this day*/               
-                CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1.Visible && Title5.Visible
+                CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1.Visible && Title2.Visible
             Width: =6.5
             X: =MonthDayGallery1.TemplateWidth / 2 - Self.Width / 2
             Y: =MonthDayGallery1.TemplateHeight * (0.75)
             ZIndex: =1
 
         Subcircle1 As circle:
-            Height: =3 * Title5.Size
+            Height: =3 * Title2.Size
             OnSelect: =Select(Parent)
-            Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5.Visible)
+            Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title2.Visible)
             Width: =Self.Height
             X: =MonthDayGallery1.TemplateWidth/2 - Self.Width/2
             Y: =MonthDayGallery1.TemplateHeight / 2 - Self.Height / 2
             ZIndex: =2
 
-        Title5 As label:
+        Title2 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1.Color)
@@ -259,22 +259,22 @@
             Fill: =RGBA(0,0,0,0)
             Height: =Parent.TemplateHeight
             HoverFill: =RGBA(0,0,0,0)
-            OnSelect: =Select(Title6)
+            OnSelect: =Select(Title4)
             TabIndex: =0
             Width: =Parent.TemplateWidth
             ZIndex: =1
 
         iconLocation1 As icon.Waypoint:
-            Height: =Subtitle4.Height
+            Height: =Subtitle1.Height
             Icon: =Icon.Waypoint
-            OnSelect: =Select(Title6)
+            OnSelect: =Select(Title4)
             TabIndex: =0
             Width: =28
-            X: =Title6.X
-            Y: =Subtitle4.Y
+            X: =Title4.X
+            Y: =Subtitle1.Y
             ZIndex: =2
 
-        Title6 As label:
+        Title4 As label:
             BorderColor: =Self.Color
             FocusedBorderThickness: =2
             FontWeight: =FontWeight.Semibold
@@ -291,11 +291,11 @@
             Y: =CalendarEventsGallery1.TemplateHeight / 4 - Self.Height / 2 + 5
             ZIndex: =3
 
-        Subtitle4 As label:
+        Subtitle1 As label:
             FocusedBorderThickness: =2
             FontWeight: =FontWeight.Lighter
             Height: =Self.Size * 2
-            OnSelect: =Select(Title6)
+            OnSelect: =Select(Title4)
             PaddingBottom: =0
             Size: =18 * CalendarEventsGallery1.TemplateHeight / 105
             Text: =ThisItem.Location
@@ -309,31 +309,31 @@
 
         Body1 As label:
             FocusedBorderThickness: =2
-            Height: =Title6.Height
-            OnSelect: =Select(Title6)
+            Height: =Title4.Height
+            OnSelect: =Select(Title4)
             Size: =17 * CalendarEventsGallery1.TemplateHeight / 105
             Text: =Text(ThisItem.Start, DateTimeFormat.ShortTime)
             VerticalAlign: =Middle
             Width: =110
             Wrap: =false
             X: =32
-            Y: =Title6.Y
+            Y: =Title4.Y
             ZIndex: =5
 
         Description1 As label:
             FocusedBorderThickness: =2
-            Height: =Subtitle4.Height
-            OnSelect: =Select(Title6)
+            Height: =Subtitle1.Height
+            OnSelect: =Select(Title4)
             Size: =17 * CalendarEventsGallery1.TemplateHeight / 105
             Text: =DateDiff(ThisItem.Start, ThisItem.End, Minutes) & Lower(Left("Minute_Name", 1))
             VerticalAlign: =Middle
             Width: =100
             Wrap: =false
             X: =32
-            Y: =Subtitle4.Y
+            Y: =Subtitle1.Y
             ZIndex: =6
 
-        Separator2 As rectangle:
+        Separator1 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth

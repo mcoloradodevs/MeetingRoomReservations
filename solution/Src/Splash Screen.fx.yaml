@@ -1,6 +1,6 @@
 "'Splash Screen' As screen":
     Fill: |
-        =ColorFade(varAppStyle.ColorAcento, 80%) 
+        =ColorFade(varAppStyle.ColorAcento, 80%)
 
     Image1 As image:
         Height: =Self.Width

@@ -86,7 +86,8 @@
         Height: =150
         OnSelect: |-
             =Set(varFechaSeleccionada, DateValue(Text(Today(), UTC))); //Variable para almacenar la fecha de hoy -- convertida a la zona horaria UTC
-            ClearCollect(colDisponibilidadSede, ShowColumns(Filter( Capacidades, Sede.Sede = varSedeSeleccionada.Sede And Fecha >= varFechaSeleccionada And Fecha <= DateAdd(varFechaSeleccionada, 1, Days ) ), "msus_fecha", "msus_horadeinicio", "msus_horadefin", "msus_Piso", "msus_capacidadid", "msus_capacidaddisponible" ) );
+            ClearCollect(colDisponibilidadSede, ShowColumns(Filter( Capacidades, Sede.Sede = varSedeSeleccionada.Sede ), "msus_fecha", "msus_horadeinicio", "msus_horadefin", "msus_Piso", "msus_Sede",  "msus_capacidadid", "msus_capacidaddisponible", "msus_horario" ) ); //Colección para almacenar la disponibilidad de la sede seleccionada
+            ClearCollect(colDisponibilidadSedeDia, Filter(colDisponibilidadSede, DateValue(msus_fecha) = DateValue(varFechaSeleccionada))); //Colección para almacenar la disponibilidad de la sede seleccionada en el día seleccionado
             Navigate('Reservation Screen')
         Size: =18
         Text: ="Puesto"
