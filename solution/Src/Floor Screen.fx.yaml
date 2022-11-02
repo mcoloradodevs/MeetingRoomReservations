@@ -22,6 +22,7 @@
             ZIndex: =1
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Default: =First(Gallery1.AllItems)
         Height: =461
         Items: =Sort(Filter(Pisos, Sede.Sede = varSedeSeleccionada.Sede), 'Piso Número', Ascending)
         Layout: =Layout.Vertical
@@ -109,7 +110,8 @@
                     }
                 ),
                 Notify("Algo salió mal",NotificationType.Error),//Error que se muestra si no se logró crear la reserva
-                Navigate('Main Screen');Notify("La reserva se ha generado",NotificationType.Success)//Navegar a la pantalla de éxito
+                Navigate('Main Screen');Notify("La reserva se ha generado",NotificationType.Success);
+                Concurrent( Reset(Gallery1), Reset(Gallery2), Reset(MonthDayGallery1_1), Reset(gal_Sedes)) //Navegar a la pantalla de éxito
             )
         Size: =21
         Text: ="Reservar"
