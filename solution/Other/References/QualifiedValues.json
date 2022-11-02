@@ -1,12 +1,19 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_msus_sede_forms",
-      "Namespace": "Sedes (Formularios)",
+      "Kind": "default.cds_msus_auditorio_forms",
+      "Namespace": "Auditorios (Formularios)",
       "Values": {
-        "Formulario de vista rápida de la sede": "26e92cc9-2a9d-441d-ad2d-810d4d10db5e",
-        "Formulario principal de la sede": "5808a871-0b14-44d4-a0ec-9bec55bd2c7e",
-        "Information": "3a7c1e89-3e0c-4612-b49f-4f5256e8df94"
+        "Information": "c46c4ba8-1a6e-4e3a-b8b7-c4d757bc4693"
+      }
+    },
+    {
+      "Kind": "default.cds_msus_capacidad_forms",
+      "Namespace": "Capacidades (Formularios)",
+      "Values": {
+        "Formulario de creación de capacidad": "3ac839d3-b716-428a-8d40-88115739dbe2",
+        "Formulario de creación rápida de capacidad": "f376da26-ef53-ed11-9561-000d3ac18ffd",
+        "Información": "624348c1-2b57-4f98-b0fb-5f1e54ccd4fc"
       }
     },
     {
@@ -26,15 +33,6 @@
       }
     },
     {
-      "Kind": "default.cds_msus_capacidad_forms",
-      "Namespace": "Capacidades (Formularios)",
-      "Values": {
-        "Formulario de creación de capacidad": "3ac839d3-b716-428a-8d40-88115739dbe2",
-        "Formulario de creación rápida de capacidad": "f376da26-ef53-ed11-9561-000d3ac18ffd",
-        "Información": "624348c1-2b57-4f98-b0fb-5f1e54ccd4fc"
-      }
-    },
-    {
       "Kind": "default.cds_msus_sala_forms",
       "Namespace": "Salas (Formularios)",
       "Values": {
@@ -44,10 +42,12 @@
       }
     },
     {
-      "Kind": "default.cds_msus_auditorio_forms",
-      "Namespace": "Auditorios (Formularios)",
+      "Kind": "default.cds_msus_sede_forms",
+      "Namespace": "Sedes (Formularios)",
       "Values": {
-        "Information": "c46c4ba8-1a6e-4e3a-b8b7-c4d757bc4693"
+        "Formulario de vista rápida de la sede": "26e92cc9-2a9d-441d-ad2d-810d4d10db5e",
+        "Formulario principal de la sede": "5808a871-0b14-44d4-a0ec-9bec55bd2c7e",
+        "Information": "3a7c1e89-3e0c-4612-b49f-4f5256e8df94"
       }
     },
     {
