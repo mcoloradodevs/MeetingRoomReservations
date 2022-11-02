@@ -1,4 +1,5 @@
 "'Main Screen' As screen":
+    OnVisible: =Set(varSedeSeleccionada, First(colSedes))
 
     "gal_Sedes As gallery.'BrowseLayout_Horizontal_TwoTextOneImageOverlayVariant_ver4.0'":
         BorderStyle: =BorderStyle.None
