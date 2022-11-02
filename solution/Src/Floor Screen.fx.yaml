@@ -71,7 +71,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Text: |-
-                ="Disponibilidad: " &  Round(LookUp(colDisponibilidadSedeDia, msus_Piso.Piso = ThisItem.Piso).msus_capacidaddisponible * 10000 /(ThisItem.'Capacidad nominal'*ThisItem.'Porcentaje reducido de capacidad (%)'), 0) & "%"
+                ="Disponibilidad: " &  Round(LookUp(colDisponibilidadSedeDia, msus_Piso.Piso = ThisItem.Piso && msus_horario = varHorarioSeleccionado).msus_capacidaddisponible * 10000 /(ThisItem.'Capacidad nominal'*ThisItem.'Porcentaje reducido de capacidad (%)'), 0) & "%"
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
