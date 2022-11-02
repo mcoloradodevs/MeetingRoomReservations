@@ -265,8 +265,7 @@
                 OnSelect: |-
                     =Select(Parent);
                     Set(varFechaSeleccionada, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                    
-                    //ClearCollect(colDisponibilidadSedeDia; Filter(colDisponibilidadSede; DateValue(msus_fecha) = DateValue(varFechaSeleccionada)) )
+                    ClearCollect(colDisponibilidadSedeDia, Filter(colDisponibilidadSede, DateValue(msus_fecha) = DateValue(varFechaSeleccionada)) )
                 Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                 TabIndex: =0
                 Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))

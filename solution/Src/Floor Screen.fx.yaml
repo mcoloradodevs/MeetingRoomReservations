@@ -1,2 +1,120 @@
 "'Floor Screen' As screen":
 
+    "Gallery2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageOverlayVariant_ver4.0'":
+        BorderStyle: =BorderStyle.None
+        Height: =420
+        Items: =colFotosPisos
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =640
+        Y: =40
+        ZIndex: =1
+
+        Image6 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Height: =420
+            Image: =ThisItem.Value
+            ImagePosition: =ImagePosition.Stretch
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =461
+        Items: =Sort(Filter(Pisos, Sede.Sede = varSedeSeleccionada.Sede), 'Piso Número', Ascending)
+        Layout: =Layout.Vertical
+        OnSelect: |-
+            =ClearCollect(colFotosPisos, ThisItem.'Imagen 1', ThisItem.'Imagen 2', ThisItem.'Imagen 3');
+            Set(varPisoSeleccionado, ThisItem);
+            Set(varCapacidadSeleccionada, LookUp(Capacidades, Fecha >= varFechaSeleccionada && Fecha <= DateAdd(varFechaSeleccionada, 1, Days) && Horario = varHorarioSeleccionado && Piso.Piso = varPisoSeleccionado.Piso)) //Buscar la capacidad correspondiente al piso, día y horario escogidos
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Width: =598
+        X: =21
+        Y: =486
+        ZIndex: =1
+
+        Image7 As image:
+            Fill: =If(ThisItem.IsSelected, ColorFade(varAppStyle.ColorSecundario, 70%))
+            Image: =
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =598
+            ZIndex: =1
+
+        Title6 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Piso Número'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Disponibilidad: " &  Round(LookUp(colDisponibilidadSedeDia, msus_Piso.Piso = ThisItem.Piso).msus_capacidaddisponible * 10000 /(ThisItem.'Capacidad nominal'*ThisItem.'Porcentaje reducido de capacidad (%)'), 0) & "%"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title6.Y + Title6.Height + 4
+            ZIndex: =3
+
+    Button3 As button:
+        Height: =66
+        OnSelect: |-
+            =IfError(
+                Patch(
+                    Reservas,
+                    Defaults(Reservas),//La fórmula Patch permite crear un nuevo registro en la tabla de Reservas
+                    {
+                        Fecha: varFechaSeleccionada,
+                        'Hora de inicio': Switch(
+                            varHorarioSeleccionado,
+                            'Horario (Capacidades)'.Mañana,//Si el horario de la reserva es en la mañana
+                            DateValue(varFechaSeleccionada) + TimeValue(varSedeSeleccionada.'Hora de apertura'),
+                            'Horario (Capacidades)'.Tarde,//Si el horario de la reserva es en la tarde
+                            DateValue(varFechaSeleccionada) + TimeValue(DateAdd(varSedeSeleccionada.'Hora de apertura',5,Hours)),
+                            Blank(),//Si el horario de la reserva es todo el día
+                            DateValue(varFechaSeleccionada) + TimeValue(varSedeSeleccionada.'Hora de apertura')
+                        ),
+                        'Hora de fin': Switch(
+                            varHorarioSeleccionado,
+                            'Horario (Capacidades)'.Mañana,//Si el horario de la reserva es en la mañana
+                            DateValue(varFechaSeleccionada) + TimeValue(DateAdd(varSedeSeleccionada.'Hora de apertura',5,Hours)),
+                            'Horario (Capacidades)'.Tarde,//Si el horario de la reserva es en la tarde
+                            DateValue(varFechaSeleccionada) + TimeValue(DateAdd(varSedeSeleccionada.'Hora de apertura',10,Hours)),
+                            Blank(),//Si el horario de la reserva es todo el día
+                            DateValue(varFechaSeleccionada) + TimeValue(DateAdd(varSedeSeleccionada.'Hora de apertura',10,Hours))
+                        ),
+                        Capacidad: varCapacidadSeleccionada
+                    }
+                ),
+                Notify("Algo salió mal",NotificationType.Error),//Error que se muestra si no se logró crear la reserva
+                Navigate('Main Screen');Notify("La reserva se ha generado",NotificationType.Success)//Navegar a la pantalla de éxito
+            )
+        Size: =21
+        Text: ="Reservar"
+        Width: =598
+        X: =21
+        Y: =974
+        ZIndex: =2
+
